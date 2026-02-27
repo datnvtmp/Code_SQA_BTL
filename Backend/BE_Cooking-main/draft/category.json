@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Món chính",
+    "description": "Các món ăn chính thường dùng trong bữa trưa hoặc bữa tối, cung cấp đầy đủ dinh dưỡng."
+  },
+  {
+    "name": "Món khai vị",
+    "description": "Những món ăn nhẹ được dùng để kích thích vị giác trước bữa chính."
+  },
+  {
+    "name": "Món tráng miệng",
+    "description": "Các món ngọt hoặc trái cây dùng sau bữa ăn để kết thúc bữa ăn một cách hoàn hảo."
+  },
+  {
+    "name": "Ăn sáng",
+    "description": "Những món ăn nhẹ, dễ làm và giàu năng lượng cho buổi sáng."
+  },
+  {
+    "name": "Ăn chay",
+    "description": "Các món ăn không sử dụng thịt, cá hoặc sản phẩm động vật."
+  },
+  {
+    "name": "Món nướng",
+    "description": "Các món ăn được chế biến bằng cách nướng trên than, lò hoặc vỉ."
+  },
+  {
+    "name": "Món chiên xào",
+    "description": "Những món được chiên hoặc xào nhanh, giữ hương vị và độ giòn."
+  },
+  {
+    "name": "Món hầm & súp",
+    "description": "Các món ăn được nấu lâu trong nước dùng, mềm và đậm đà hương vị."
+  },
+  {
+    "name": "Đồ uống",
+    "description": "Các loại nước giải khát, sinh tố, trà, cà phê hoặc cocktail."
+  },
+  {
+    "name": "Bánh & làm bánh",
+    "description": "Các loại bánh ngọt, bánh mặn và hướng dẫn làm bánh tại nhà."
+  },
+  {
+    "name": "Món ăn vặt",
+    "description": "Những món nhỏ, dễ làm, dùng khi đói nhẹ hoặc giải trí."
+  },
+  {
+    "name": "Ẩm thực vùng miền",
+    "description": "Tổng hợp các món đặc trưng theo vùng miền như Bắc, Trung, Nam hoặc quốc tế."
+  }
+]
+ 

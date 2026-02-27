@@ -1,0 +1,141 @@
+# server:
+#   port: 8081
+#   servlet:
+#     context-path: /abc
+# server:
+#   tomcat:
+#     # Tham số này giải quyết trực tiếp lỗi FileCountLimitExceededException
+#     max-part-count: 200
+#     # Tham số này giúp tránh lỗi header của các part quá dài
+#     max-part-header-size: 8192
+#     max-parameter-count: 2000
+
+server:
+  tomcat:
+    # Tham số này giải quyết trực tiếp lỗi FileCountLimitExceededException
+    max-part-count: 600
+    # Tham số này giúp tránh lỗi header của các part quá dài
+    max-part-header-size: 24576
+    max-parameter-count: 6000
+
+spring:
+  application:
+    name: cooking
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 500MB
+      # Thêm dòng này để Spring xử lý số lượng file/part lớn
+      file-size-threshold: 2KB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: recipeappspring@gmail.com
+    password: tugmhkseleycubdk
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true 
+  ai:
+    chat:
+      memory:
+        repository:
+          jdbc:
+            # initialize-schema: always
+            initialize-schema: never
+            # schema: classpath:org/springframework/ai/chat/memory/repository/jdbc/schema.sql
+    model:
+     chat: openai #groq và chatGPT
+    #  chat: google-genai # gemini (Đang lỗi)
+    openai:
+      api-key: 123456
+      base-url: https://api.groq.com/openai
+      chat:
+        options:
+          model: openai/gpt-oss-120b
+
+          # model: meta-llama/llama-4-maverick-17b-128e-instruct
+    # google:
+    #   genai:
+    #     api-key: ${GOOGLE_GENAI_API_KEY}
+    #     project-id: gen-lang-client-0239165191
+    #     chat:
+    #       options:
+    #         model: gemini-2.0-flash
+  datasource:
+    url: jdbc:mysql://localhost:3306/cooking_db
+    username: root
+    password: mattroi010
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # ddl-auto: create
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: true #Test thoi ti tat di nhe mac dinh la true
+
+ai:
+  modules:
+    chat:
+      enabled: true
+
+app:
+  jwt:
+    secret: thisismyscretkeyformyownmuahahahahahahahahahahahahahahaha
+    expiration: 3600000000 #  in milliseconds
+    refresh-expiration: 360000000000
+    header: Authorization
+    prefix: Bearer
+  admin:
+    email: admin
+    password: admin12345
+    username: admin
+    dob: 1990-01-01
+    roles: 
+      - ADMIN
+      - USER
+      - CHEF
+  upload:
+    dir:
+      avatar: static_resource/public/upload/avatars
+      recipe: static_resource/public/upload/recipes
+      step: static_resource/public/upload/steps
+      dish: static_resource/public/upload/dishs
+      chat: static_resource/public/upload/chats
+      recipe-video: static_resource/public/upload/recipe_videos
+      category-image: static_resource/public/upload/category_images
+      temp: static_resource/public/upload/temp
+  static-base-url: http://localhost:8080
+  frontend-url: http://localhost:3000 # Thay thế bằng URL frontend của bạn
+
+
+pinecone:
+  api-key: 12345678
+  host: recipe001-jis24m5.svc.aped-4627-b74a.pinecone.io # Ví dụ: my-index-1234.svc.pinecone.io <-- THAY THẾ
+  PINECONE_ENVIRONMENT: us-east-1
+  index-name: recipe001 # Tên Index bạn muốn dùng <-- THAY THẾ
+  namespace: example-namespace # Namespace mặc định
+
+# VNPay Configuration (Sandbox)
+vnpay:
+  # tmn-code: NJJ0R8FS  # Đăng ký tại http://sandbox.vnpayment.vn/devreg/
+  # hash-secret: BYKJBHPPZKQMKBIBGGXIYKWYFAYSJXCW  # Secret key từ VNPAY
+  tmn-code: X1X7JTMK  # Đăng ký tại http://sandbox.vnpayment.vn/devreg/
+  hash-secret: DHUZODON768EZLRV8FJF5ZKMUSQMLT72  # Secret key từ VNPAY
+  pay-url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+  return-url: http://localhost:8080/api/payment/vnpay/return
+  # return-url:  https://venular-unselfconscious-jalisa.ngrok-free.dev/api/payment/vnpay/return
+  ipn-url: https://venular-unselfconscious-jalisa.ngrok-free.dev/api/payment/vnpay/ipn  # Phải là URL public có SSL khi production
+  api-transaction-url: https://sandbox.vnpayment.vn/merchant_webapi/api/transaction
+  version: 2.1.0
+  command: pay
+  order-type: other
+
+# Chef Upgrade Configuration
+chef:
+  upgrade:
+    price: 100000  # 100,000 VND (sẽ nhân 100 khi gửi sang VNPay)

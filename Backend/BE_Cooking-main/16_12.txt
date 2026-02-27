@@ -1,0 +1,16 @@
+-----16/12----------
+- một dish là 1 món, có thể liên kết với recipe hoặc không
+- 1 user và 1 seller (người bán, shop bán) chỉ có 1 cart active tại 1 thời điểm
+---
+1. User mua cần them địa chỉ qua address-controller
+2. Người bán cần đăng món tại post /api/dishs/create 
+3. Món phải được BẬT TRẠNG THÁI MÓN tại put /api/dishs/{dishId}/toggle-status hoặc
+put /api/dishs/toggle-all (để bật all) trước khi order (mặc định đang để active lúc tạo món nên không cần bật lại)
+3. User them món vao cart ở tại post /api/cart/add (chỉ them các món đang active và còn số lượng). Cac món cùng 1 shop sẽ vô cùng 1 cart. các món đã có trong cart thì sẽ tăng số lượng. CHÚ Ý: 1 SHOP - 1 USER chỉ có 1 cart tại 1 thời điểm
+4. Thanh toán: hiện tai chỉ có qua VN pay,dđang cập nhật ship cod 
+api thanh toán /api/payment/checkout/cart/{cartId}/online-payment
+---
+ngoài ra còn các api để xem, sửa, tại dish-controller, cart-controller, buy-controller
+---
+phần thanh toán lại cho seller, đang triển khai
+---

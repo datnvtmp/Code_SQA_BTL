@@ -1,0 +1,26 @@
+{
+  "title": "Trứng chiên hành",
+  "description": "Món trứng chiên thơm ngon, dễ làm cho bữa sáng.",
+  "servings": 2,
+  "prepTime": 5,
+  "cookTime": 7,
+  "scope": "PUBLIC",
+  "imageUrl": "https://example.com/images/trung-chien.jpg",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "description": "Đập trứng vào tô, thêm hành lá cắt nhỏ, nêm chút muối.",
+      "imageUrls": ["https://example.com/steps/trung-chien-1.jpg"]
+    },
+    {
+      "stepNumber": 2,
+      "description": "Đánh đều và chiên trên chảo nóng đến khi vàng đều hai mặt.",
+      "imageUrls": ["https://example.com/steps/trung-chien-2.jpg"]
+    }
+  ],
+  "recipeIngredients": [
+    { "ingredientId": 1, "quantity": 2, "unit": "quả", "rawName": "trứng gà", "displayOrder": 1 },
+    { "ingredientId": 2, "quantity": 1, "unit": "thìa", "rawName": "dầu ăn", "displayOrder": 2 },
+    { "ingredientId": null, "quantity": null, "unit": null, "rawName": "hành lá", "displayOrder": 3 }
+  ]
+}

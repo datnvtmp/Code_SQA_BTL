@@ -1,0 +1,113 @@
+    // //////////////////// MAU
+    // /**
+    // * Tạo URL thanh toán VNPay
+    // */
+    // public PaymentResponse createPaymentTest(HttpServletRequest request,
+    // PaymentRequest paymentRequest, Long userId)
+    // throws UnsupportedEncodingException {
+
+    // // Lấy thông tin user
+    // User user = userRepository.findById(userId)
+    // .orElseThrow(() -> new RuntimeException("User not found"));
+
+    // // Tạo mã giao dịch unique
+    // String txnRef = generateUniqueTxnRef();
+
+    // // Tính số tiền (nhân 100 để bỏ phần thập phân)
+    // long amount = paymentRequest.getAmount() * 100;
+
+    // // Tạo PaymentOrder
+    // PaymentOrder paymentOrder = PaymentOrder.builder()
+    // .user(user)
+    // .orderType(paymentRequest.getOrderType())
+    // .txnRef(txnRef)
+    // .amount(amount)
+    // .orderInfo(paymentRequest.getOrderInfo())
+    // .paymentStatus(PaymentStatus.PENDING)
+    // .build();
+
+    // paymentOrderRepository.save(paymentOrder);
+
+    // // Build VNPay payment parameters
+    // Map<String, String> vnpParams = new HashMap<>();
+    // vnpParams.put("vnp_Version", vnPayConfig.getVersion());
+    // vnpParams.put("vnp_Command", vnPayConfig.getCommand());
+    // vnpParams.put("vnp_TmnCode", vnPayConfig.getTmnCode());
+    // vnpParams.put("vnp_Amount", String.valueOf(amount));
+    // vnpParams.put("vnp_CurrCode", "VND");
+
+    // if (paymentRequest.getBankCode() != null &&
+    // !paymentRequest.getBankCode().isEmpty()) {
+    // vnpParams.put("vnp_BankCode", paymentRequest.getBankCode());
+    // }
+
+    // vnpParams.put("vnp_TxnRef", txnRef);
+    // vnpParams.put("vnp_OrderInfo", paymentRequest.getOrderInfo());
+    // vnpParams.put("vnp_OrderType", vnPayConfig.getOrderType());
+
+    // String locale = paymentRequest.getLanguage();
+    // if (locale == null || locale.isEmpty()) {
+    // locale = "vn";
+    // }
+    // vnpParams.put("vnp_Locale", locale);
+
+    // vnpParams.put("vnp_ReturnUrl", vnPayConfig.getReturnUrl());
+    // vnpParams.put("vnp_IpAddr", getIpAddress(request));
+
+    // // Thời gian tạo và hết hạn
+    // Calendar cld = Calendar.getInstance(TimeZone.getTimeZone("Etc/GMT+7"));
+    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+    // String vnpCreateDate = formatter.format(cld.getTime());
+    // vnpParams.put("vnp_CreateDate", vnpCreateDate);
+
+    // cld.add(Calendar.MINUTE, 15);
+    // String vnpExpireDate = formatter.format(cld.getTime());
+    // vnpParams.put("vnp_ExpireDate", vnpExpireDate);
+
+    // // Build query string và hash data
+    // List<String> fieldNames = new ArrayList<>(vnpParams.keySet());
+    // Collections.sort(fieldNames);
+
+    // StringBuilder hashData = new StringBuilder();
+    // StringBuilder query = new StringBuilder();
+
+    // Iterator<String> itr = fieldNames.iterator();
+    // while (itr.hasNext()) {
+    // String fieldName = itr.next();
+    // String fieldValue = vnpParams.get(fieldName);
+    // if (fieldValue != null && !fieldValue.isEmpty()) {
+    // // Build hash data
+    // hashData.append(fieldName);
+    // hashData.append('=');
+    // hashData.append(URLEncoder.encode(fieldValue,
+    // StandardCharsets.US_ASCII.toString()));
+
+    // // Build query
+    // query.append(URLEncoder.encode(fieldName,
+    // StandardCharsets.US_ASCII.toString()));
+    // query.append('=');
+    // query.append(URLEncoder.encode(fieldValue,
+    // StandardCharsets.US_ASCII.toString()));
+
+    // if (itr.hasNext()) {
+    // query.append('&');
+    // hashData.append('&');
+    // }
+    // }
+    // }
+
+    // String queryUrl = query.toString();
+    // String vnpSecureHash = vnPayConfig.hmacSHA512(vnPayConfig.getHashSecret(),
+    // hashData.toString());
+    // queryUrl += "&vnp_SecureHash=" + vnpSecureHash;
+    // String paymentUrl = vnPayConfig.getPayUrl() + "?" + queryUrl;
+
+    // log.info("Created payment URL for txnRef: {}", txnRef);
+
+    // return PaymentResponse.builder()
+    // .code("00")
+    // .message("success")
+    // .paymentUrl(paymentUrl)
+    // .txnRef(txnRef)
+    // .build();
+    // }

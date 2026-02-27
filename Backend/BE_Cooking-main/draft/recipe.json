@@ -1,0 +1,72 @@
+{
+  "status": 200,
+  "message": "Thanh cong",
+  "data": {
+    "result": {
+      "metadata": {
+        "finishReason": "STOP",
+        "contentFilters": [],
+        "empty": true
+      },
+      "output": {
+        "messageType": "ASSISTANT",
+        "metadata": {
+          "role": "ASSISTANT",
+          "messageType": "ASSISTANT",
+          "refusal": "",
+          "finishReason": "STOP",
+          "annotations": [],
+          "index": 0,
+          "id": "chatcmpl-de29a41f-0fa0-4070-a82c-3e42094d7175"
+        },
+        "toolCalls": [],
+        "media": [],
+        "text": "Chào DaveCX09,\n\nBạn có thể nấu món **Canh bí đỏ thịt băm**.  \n- **Nguyên liệu chính**: thịt heo băm, bí đỏ, hành, nước.  \n- **Cách làm**:  \n  1. Gọt vỏ bí đỏ, cắt thành miếng vừa ăn.  \n  2. Phi hành, xào thịt heo băm cho thơm.  \n  3. Thêm bí đỏ và nước vào nấu cho đến khi bí chín mềm.  \n\nMón canh này có vị ngọt thanh, dễ nấu và rất thích hợp khi bạn có thịt heo.  \n\nBạn cần mua bí đỏ và hành để hoàn thiện món ăn, hoặc nếu bạn muốn thử món khác, mình có thể gợi ý thêm dựa trên nguyên liệu hiện có. Bạn muốn biết thêm không?"
+      }
+    },
+    "metadata": {
+      "id": "chatcmpl-de29a41f-0fa0-4070-a82c-3e42094d7175",
+      "model": "openai/gpt-oss-20b",
+      "rateLimit": {
+        "requestsLimit": 1000,
+        "requestsRemaining": 998,
+        "requestsReset": "PT2M8S",
+        "tokensLimit": 8000,
+        "tokensRemaining": 6648,
+        "tokensReset": "PT14S"
+      },
+      "usage": {
+        "promptTokens": 1777,
+        "completionTokens": 651,
+        "totalTokens": 2428
+      },
+      "promptMetadata": [],
+      "empty": false
+    },
+    "results": [
+      {
+        "metadata": {
+          "finishReason": "STOP",
+          "contentFilters": [],
+          "empty": true
+        },
+        "output": {
+          "messageType": "ASSISTANT",
+          "metadata": {
+            "role": "ASSISTANT",
+            "messageType": "ASSISTANT",
+            "refusal": "",
+            "finishReason": "STOP",
+            "annotations": [],
+            "index": 0,
+            "id": "chatcmpl-de29a41f-0fa0-4070-a82c-3e42094d7175"
+          },
+          "toolCalls": [],
+          "media": [],
+          "text": "Chào DaveCX09,\n\nBạn có thể nấu món **Canh bí đỏ thịt băm**.  \n- **Nguyên liệu chính**: thịt heo băm, bí đỏ, hành, nước.  \n- **Cách làm**:  \n  1. Gọt vỏ bí đỏ, cắt thành miếng vừa ăn.  \n  2. Phi hành, xào thịt heo băm cho thơm.  \n  3. Thêm bí đỏ và nước vào nấu cho đến khi bí chín mềm.  \n\nMón canh này có vị ngọt thanh, dễ nấu và rất thích hợp khi bạn có thịt heo.  \n\nBạn cần mua bí đỏ và hành để hoàn thiện món ăn, hoặc nếu bạn muốn thử món khác, mình có thể gợi ý thêm dựa trên nguyên liệu hiện có. Bạn muốn biết thêm không?"
+        }
+      }
+    ]
+  },
+  "timestamp": "2025-12-08T03:59:06.6443383"
+}

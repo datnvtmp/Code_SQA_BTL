@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>🧑‍🍳 Test API /create/recipe</title>
+<style>
+  body { font-family: sans-serif; margin: 20px; background: #f6f6f6; }
+  h2 { color: #333; }
+  form { display: flex; flex-direction: column; gap: 10px; max-width: 700px; }
+  label { font-weight: bold; margin-top: 8px; }
+  textarea, input, select { padding: 6px; font-size: 14px; border-radius: 4px; border: 1px solid #ccc; }
+  button { padding: 8px 14px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 4px; }
+  button:hover { background: #0056b3; }
+  .result { white-space: pre-wrap; background: #eee; padding: 10px; margin-top: 15px; border-radius: 5px; }
+  .group { background: #fff; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 10px; }
+  .small-btn { background: #dc3545; padding: 4px 8px; font-size: 12px; border-radius: 3px; margin-left: 5px; }
+  .small-btn:hover { background: #c82333; }
+  .add-btn { background: #28a745; font-size: 13px; margin-top: 5px; }
+  .add-btn:hover { background: #218838; }
+  img.preview { max-width: 150px; margin-top: 5px; border-radius: 6px; display: block; }
+</style>
+</head>
+<body>
+
+<h2>🧑‍🍳 Test API: /create/recipe</h2>
+
+<label>JWT Token:</label>
+<input type="text" id="jwt" placeholder="Dán token JWT của bạn vào đây" />
+
+<form id="recipeForm">
+  <label>Title:</label>
+  <input name="title" value="Bánh trứng nướng phô mai" required />
+
+  <label>Description:</label>
+  <textarea name="description">Món bánh trứng mềm mịn, béo ngậy thơm mùi phô mai.</textarea>
+
+  <label>Servings:</label>
+  <input name="servings" type="number" value="4" required />
+
+  <label>Prep Time (phút):</label>
+  <input name="prepTime" type="number" value="15" required />
+
+  <label>Cook Time (phút):</label>
+  <input name="cookTime" type="number" value="25" required />
+
+  <label>Difficulty:</label>
+  <select name="difficulty">
+    <option>VERY_EASY</option>
+    <option selected>EASY</option>
+    <option>MEDIUM</option>
+  </select>
+
+  <label>Scope:</label>
+  <select name="scope">
+    <option selected>PUBLIC</option>
+    <option>PRIVATE</option>
+    <option>DRAFT</option>
+  </select>
+
+  <label>Ảnh đại diện:</label>
+  <input name="image" type="file" accept="image/*" onchange="previewImage(this, '#mainPreview')" />
+  <img id="mainPreview" class="preview" style="display:none" />
+
+  <hr>
+  <h3>Steps</h3>
+  <div id="stepsContainer"></div>
+  <button type="button" class="add-btn" onclick="addStep()">+ Thêm Step</button>
+
+  <hr>
+  <h3>Ingredients</h3>
+  <div id="ingredientsContainer"></div>
+  <button type="button" class="add-btn" onclick="addIngredient()">+ Thêm Ingredient</button>
+
+  <hr>
+  <h3>Category IDs</h3>
+  <div id="categoriesContainer">
+    <input type="number" class="categoryId" value="1" placeholder="Category ID" /> 
+  </div>
+  <button type="button" class="add-btn" onclick="addCategory()">+ Thêm Category</button>
+
+  <h3>Tag IDs</h3>
+  <div id="tagsContainer">
+    <input type="number" class="tagId" value="2" placeholder="Tag ID" /> 
+  </div>
+  <button type="button" class="add-btn" onclick="addTag()">+ Thêm Tag</button>
+
+  <hr>
+  <button type="submit">🚀 Gửi API</button>
+</form>
+
+<div class="result" id="result"></div>
+
+<script>
+let stepCount = 0;
+
+// Hiển thị ảnh preview
+function previewImage(input, targetSelector) {
+  const file = input.files[0];
+  const img = document.querySelector(targetSelector);
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      img.src = e.target.result;
+      img.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  } else {
+    img.style.display = 'none';
+  }
+}
+
+function addStep() {
+  const c = document.getElementById('stepsContainer');
+  const d = document.createElement('div');
+  d.className = 'group';
+  const idx = ++stepCount;
+  d.innerHTML = `
+    <label>Step #${idx}</label>
+    <input type="number" placeholder="stepNumber" class="stepNumber" value="${idx}" required />
+    <textarea placeholder="Description" class="stepDesc" required>Bước ${idx}: Mô tả...</textarea>
+    <input type="file" multiple class="stepImages" accept="image/*" onchange="showStepPreviews(this)" />
+    <div class="stepPreview"></div>
+    <button type="button" class="small-btn" onclick="this.parentElement.remove()">Xóa</button>
+  `;
+  c.appendChild(d);
+}
+
+function showStepPreviews(input) {
+  const container = input.nextElementSibling;
+  container.innerHTML = '';
+  for (let f of input.files) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.className = 'preview';
+      container.appendChild(img);
+    };
+    reader.readAsDataURL(f);
+  }
+}
+
+function addIngredient() {
+  const c = document.getElementById('ingredientsContainer');
+  const d = document.createElement('div');
+  d.className = 'group';
+  d.innerHTML = `
+    <input type="text" placeholder="Raw name (vd: 2 quả trứng)" class="rawName" value="2 quả trứng" required />
+    <input type="number" step="0.1" placeholder="Quantity" class="quantity" value="2" />
+    <input type="text" placeholder="Unit (vd: quả, gram)" class="unit" value="quả" />
+    <input type="number" placeholder="Ingredient ID (nếu có)" class="ingredientId" />
+    <input type="number" placeholder="Display order" class="displayOrder" value="1" />
+    <button type="button" class="small-btn" onclick="this.parentElement.remove()">Xóa</button>
+  `;
+  c.appendChild(d);
+}
+
+function addCategory() {
+  const c = document.getElementById('categoriesContainer');
+  const d = document.createElement('div');
+  d.innerHTML = `<input type="number" class="categoryId" placeholder="Category ID" value="1" /> 
+                 <button type="button" class="small-btn" onclick="this.parentElement.remove()">X</button>`;
+  c.appendChild(d);
+}
+
+function addTag() {
+  const c = document.getElementById('tagsContainer');
+  const d = document.createElement('div');
+  d.innerHTML = `<input type="number" class="tagId" placeholder="Tag ID" value="2" /> 
+                 <button type="button" class="small-btn" onclick="this.parentElement.remove()">X</button>`;
+  c.appendChild(d);
+}
+
+document.getElementById('recipeForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const jwt = document.getElementById('jwt').value.trim();
+  if (!jwt) return alert('⚠️ Bạn chưa nhập JWT!');
+
+  const form = e.target;
+  const formData = new FormData();
+
+  // Basic fields
+  ['title','description','servings','prepTime','cookTime','difficulty','scope']
+    .forEach(n => {
+      const el = form.querySelector(`[name="${n}"]`);
+      if (el && el.value) formData.append(n, el.value);
+    });
+
+  // Main image
+  const image = form.querySelector('input[name="image"]').files[0];
+  if (image) formData.append('image', image);
+
+  // Steps
+  document.querySelectorAll('#stepsContainer .group').forEach((el, idx) => {
+    formData.append(`steps[${idx}].stepNumber`, el.querySelector('.stepNumber').value);
+    formData.append(`steps[${idx}].description`, el.querySelector('.stepDesc').value);
+    const imgs = el.querySelector('.stepImages').files;
+    for (let f of imgs) {
+      formData.append(`steps[${idx}].images`, f);
+    }
+  });
+
+  // Ingredients
+  document.querySelectorAll('#ingredientsContainer .group').forEach((el, idx) => {
+    formData.append(`recipeIngredients[${idx}].rawName`, el.querySelector('.rawName').value);
+    formData.append(`recipeIngredients[${idx}].quantity`, el.querySelector('.quantity').value || '');
+    formData.append(`recipeIngredients[${idx}].unit`, el.querySelector('.unit').value || '');
+    formData.append(`recipeIngredients[${idx}].ingredientId`, el.querySelector('.ingredientId').value || '');
+    formData.append(`recipeIngredients[${idx}].displayOrder`, el.querySelector('.displayOrder').value || '');
+  });
+
+  // Categories & Tags
+  [...document.querySelectorAll('.categoryId')].map(i => i.value).filter(v => v)
+    .forEach((v, i) => formData.append(`categoryIds[${i}]`, v));
+  [...document.querySelectorAll('.tagId')].map(i => i.value).filter(v => v)
+    .forEach((v, i) => formData.append(`tagIds[${i}]`, v));
+
+  try {
+    const res = await fetch('http://localhost:8080/user/create/recipe', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + jwt },
+      body: formData
+    });
+
+    const rawText = await res.text();
+    document.getElementById('result').textContent = `Status: ${res.status}\n` + rawText;
+    alert(`📡 Response (${res.status}):\n\n` + rawText);
+  } catch (err) {
+    const msg = '❌ Lỗi: ' + err.message;
+    document.getElementById('result').textContent = msg;
+    alert(msg);
+  }
+});
+
+// thêm sẵn 1 step và 1 nguyên liệu
+window.addEventListener('DOMContentLoaded', () => {
+  addStep();
+  addIngredient();
+});
+</script>
+
+</body>
+</html>
