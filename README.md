@@ -153,10 +153,12 @@ npm run dev
 
 | Vai trò | Email/Username | Mật khẩu |
 |---|---|---|
-| **Admin** | `admin` | `admin12345` |
-| **User** | `ninh@test.com` | `admin12345` |
+| **Admin** | `admin` | `12345678` |
+| **User** | `ninh@test.com` | `12345678` |
+| **User** | `user01@gmail.com` | `12345678` |
+| **User** | `diepbanbua@gmail.com` | `12345678` |
 
-> **Ghi chú:** Tất cả tài khoản đều dùng cùng một password hash, mật khẩu mặc định là `admin12345`.
+> **Ghi chú:** Đa phần các tài khoản đều dùng mật khẩu mặc định, vui lòng đúng mật khẩu tương ứng trên bảng.
 
 ## 🌐 Các URL quan trọng
 
@@ -176,9 +178,11 @@ cd Backend/BE_Cooking-main/cooking
 # Terminal 2 - Chạy Frontend
 cd DATN/TotNghiep-main
 npm run dev
+
+# Terminal 3 - Chạy Script Test (Tiện ích phụ - Thử nghiệm DB)
+cd DATN/TotNghiep-main
+node test.js
 ```
-# Terminal 3 - Chạy Frontend
-PS D:\SQA\CookpadOri> node "d:\SQA\CookpadOri\DATN\TotNghiep-main\test.js"  
 ## ❗ Lỗi thường gặp
 
 ### 1. Lỗi kết nối MySQL
