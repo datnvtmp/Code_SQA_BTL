@@ -50,11 +50,11 @@ spring:
      chat: openai #groq và chatGPT
     #  chat: google-genai # gemini (Đang lỗi)
     openai:
-      api-key: 123456
+      api-key: ${GROQ_API_KEY}
       base-url: https://api.groq.com/openai
       chat:
         options:
-          model: openai/gpt-oss-120b
+          model: llama3-70b-8192
 
           # model: meta-llama/llama-4-maverick-17b-128e-instruct
     # google:
