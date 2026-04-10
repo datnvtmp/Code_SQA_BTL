@@ -67,7 +67,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/cooking_db
     username: root
-    password: mattroi010
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -124,8 +124,8 @@ pinecone:
 vnpay:
   # tmn-code: NJJ0R8FS  # Đăng ký tại http://sandbox.vnpayment.vn/devreg/
   # hash-secret: BYKJBHPPZKQMKBIBGGXIYKWYFAYSJXCW  # Secret key từ VNPAY
-  tmn-code: X1X7JTMK  # Đăng ký tại http://sandbox.vnpayment.vn/devreg/
-  hash-secret: DHUZODON768EZLRV8FJF5ZKMUSQMLT72  # Secret key từ VNPAY
+  tmn-code: 69S2G5I5  # Đăng ký tại http://sandbox.vnpayment.vn/devreg/
+  hash-secret: S1E6BZCOOTCCGPODT47W4SYS49RLLOWB  # Secret key từ VNPAY
   pay-url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
   return-url: http://localhost:8080/api/payment/vnpay/return
   # return-url:  https://venular-unselfconscious-jalisa.ngrok-free.dev/api/payment/vnpay/return

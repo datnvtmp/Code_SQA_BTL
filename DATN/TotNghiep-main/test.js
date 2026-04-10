@@ -18,7 +18,7 @@ const feeds = [
 const db = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: 'mattroi010',
+  password: '123456',
   database: 'cooking_db',
   waitForConnections: true,
   connectionLimit: 10

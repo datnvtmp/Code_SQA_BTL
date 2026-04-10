@@ -358,9 +358,9 @@ const FoodDetailScreen = () => {
                         </div>
 
                         <div className="flex flex-col gap-3 overflow-y-auto max-h-[520px]">
-                            {commentsList.map(comment => (
+                            {commentsList.map((comment, index) => (
                                 <CommentItem
-                                    key={comment.id}
+                                    key={`${comment.id}-${index}`}
                                     comment={comment}
                                     replycomment={comment.replyCount}
                                     showReplies={!!showRepliesMap[comment.id]}
