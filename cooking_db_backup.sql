@@ -1,4 +1,4 @@
-﻿-- MySQL dump 10.13  Distrib 9.3.0, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 9.3.0, for Win64 (x86_64)
 --
 -- Host: localhost    Database: cooking_db
 -- ------------------------------------------------------
@@ -41,7 +41,7 @@ CREATE TABLE `addresses` (
 
 LOCK TABLES `addresses` WRITE;
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
-INSERT INTO `addresses` VALUES (1,'23r32','╞░da',0,0,2),(2,'123 HN','H├á nß╗Öi',0,0,4);
+INSERT INTO `addresses` VALUES (1,'23r32','ưda',0,0,2),(2,'123 HN','Hà nội',0,0,4);
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,7 +68,7 @@ CREATE TABLE `banners` (
 
 LOCK TABLES `banners` WRITE;
 /*!40000 ALTER TABLE `banners` DISABLE KEYS */;
-INSERT INTO `banners` VALUES (1,'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920','H├┤m nay ─ân g├¼?','Kh├ím ph├í 1000+ c├┤ng thß╗⌐c',1),(2,'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920','CookPad','M├│n ngon mß╗ùi ng├áy',1),(3,'https://picsum.photos/800/400','Ch├áo mß╗½ng Ninh tß╗¢i CookPad','Kh├ím ph├í c├┤ng thß╗⌐c nß║Ñu ─ân ngon mß╗ùi ng├áy',1),(4,'https://picsum.photos/800/400','Ch├áo mß╗½ng Ninh tß╗¢i CookPad','Kh├ím ph├í m├│n ngon mß╗ùi ng├áy',1);
+INSERT INTO `banners` VALUES (1,'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920','Hôm nay ăn gì?','Khám phá 1000+ công thức',1),(2,'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920','CookPad','Món ngon mỗi ngày',1),(3,'https://picsum.photos/800/400','Chào mừng Ninh tới CookPad','Khám phá công thức nấu ăn ngon mỗi ngày',1),(4,'https://picsum.photos/800/400','Chào mừng Ninh tới CookPad','Khám phá món ngon mỗi ngày',1);
 /*!40000 ALTER TABLE `banners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,7 +183,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'C├íc m├│n nhß║╣ ─æß║ºu bß╗»a','https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800','M├│n Khai Vß╗ï','mon-khai-vi'),(2,'C├íc m├│n ─ân gi├áu dinh d╞░ß╗íng','https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800','M├│n Ch├¡nh','mon-chinh'),(3,'─Éß╗ô ngß╗ìt v├á hoa quß║ú','https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800','Tr├íng Miß╗çng','trang-mieng');
+INSERT INTO `categories` VALUES (1,'Các món nhẹ đầu bữa','https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800','Món Khai Vị','mon-khai-vi'),(2,'Các món ăn giàu dinh dưỡng','https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800','Món Chính','mon-chinh'),(3,'Đồ ngọt và hoa quả','https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800','Tráng Miệng','trang-mieng');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -274,7 +274,7 @@ CREATE TABLE `collections` (
 
 LOCK TABLES `collections` WRITE;
 /*!40000 ALTER TABLE `collections` DISABLE KEYS */;
-INSERT INTO `collections` VALUES (1,'2026-02-28 03:36:00.573613','32r32',_binary '','ewwrß║╗wr╞░','2026-02-28 03:36:00.573613',1),(2,'2026-04-10 16:22:45.069759','Muß╗æn ─ân c╞ím',_binary '','C╞ím','2026-04-10 16:22:45.069759',4);
+INSERT INTO `collections` VALUES (1,'2026-02-28 03:36:00.573613','32r32',_binary '','ewwrẻwrư','2026-02-28 03:36:00.573613',1),(2,'2026-04-10 16:22:45.069759','Muốn ăn cơm',_binary '','Cơm','2026-04-10 16:22:45.069759',4);
 /*!40000 ALTER TABLE `collections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -338,7 +338,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,'d╞░','2026-02-28 02:45:59.727294','2026-02-28 02:45:59.727294',NULL,2,2),(2,'Ko th├¡ch c╞ím th├¡ch phß╗ƒ','2026-04-10 16:20:48.906634','2026-04-10 16:20:48.906634',NULL,6,4),(3,'hi','2026-04-10 16:22:02.834112','2026-04-10 16:22:02.834112',NULL,6,4);
+INSERT INTO `comments` VALUES (1,'dư','2026-02-28 02:45:59.727294','2026-02-28 02:45:59.727294',NULL,2,2),(2,'Ko thích cơm thích phở','2026-04-10 16:20:48.906634','2026-04-10 16:20:48.906634',NULL,6,4),(3,'hi','2026-04-10 16:22:02.834112','2026-04-10 16:22:02.834112',NULL,6,4);
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,7 +374,7 @@ CREATE TABLE `dish` (
 
 LOCK TABLES `dish` WRITE;
 /*!40000 ALTER TABLE `dish` DISABLE KEYS */;
-INSERT INTO `dish` VALUES (1,'','/static_resource/public/upload/dishs/6f518ead-4f07-47ff-8288-ca7b13f39683_OIP.webp','├áw',12341,24,'ACTIVE',0,3,1),(2,'M├│n c╞ím chi├¬n nhanh gß╗ìn, ph├╣ hß╗úp ─ân s├íng hoß║╖c tß║¡n dß╗Ñng c╞ím nguß╗Öi.\r\n','/static_resource/public/upload/dishs/8d90b399-4aab-4532-adc0-a7fd3593d3a1_cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg','C╞ím chi├¬n trß╗⌐ng',30000,10,'ACTIVE',2,6,3);
+INSERT INTO `dish` VALUES (1,'','/static_resource/public/upload/dishs/6f518ead-4f07-47ff-8288-ca7b13f39683_OIP.webp','àw',12341,24,'ACTIVE',0,3,1),(2,'Món cơm chiên nhanh gọn, phù hợp ăn sáng hoặc tận dụng cơm nguội.\r\n','/static_resource/public/upload/dishs/8d90b399-4aab-4532-adc0-a7fd3593d3a1_cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg','Cơm chiên trứng',30000,10,'ACTIVE',2,6,3);
 /*!40000 ALTER TABLE `dish` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -402,7 +402,7 @@ CREATE TABLE `featured_videos` (
 
 LOCK TABLES `featured_videos` WRITE;
 /*!40000 ALTER TABLE `featured_videos` DISABLE KEYS */;
-INSERT INTO `featured_videos` VALUES (1,'H╞░ß╗¢ng dß║½n l├ám Phß╗ƒ','https://www.youtube.com/watch?v=dQw4w9WgXcQ','https://picsum.photos/400/300',1,'2026-02-27 18:21:08');
+INSERT INTO `featured_videos` VALUES (1,'Hướng dẫn làm Phở','https://www.youtube.com/watch?v=dQw4w9WgXcQ','https://picsum.photos/400/300',1,'2026-02-27 18:21:08');
 /*!40000 ALTER TABLE `featured_videos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -435,7 +435,7 @@ CREATE TABLE `foods` (
 
 LOCK TABLES `foods` WRITE;
 /*!40000 ALTER TABLE `foods` DISABLE KEYS */;
-INSERT INTO `foods` VALUES (1,'Phß╗ƒ B├▓',NULL,'M├│n n╞░ß╗¢c',450,20,15,50,NULL,NULL,'published'),(2,'C╞ím trß║»ng',NULL,NULL,130,NULL,NULL,NULL,NULL,NULL,'published'),(3,'B├ính M├¼',NULL,'─én s├íng',250,NULL,NULL,NULL,NULL,NULL,'published'),(4,'Phß╗ƒ B├▓',NULL,'M├│n ch├¡nh',450,NULL,NULL,NULL,NULL,NULL,'published');
+INSERT INTO `foods` VALUES (1,'Phở Bò',NULL,'Món nước',450,20,15,50,NULL,NULL,'published'),(2,'Cơm trắng',NULL,NULL,130,NULL,NULL,NULL,NULL,NULL,'published'),(3,'Bánh Mì',NULL,'Ăn sáng',250,NULL,NULL,NULL,NULL,NULL,'published'),(4,'Phở Bò',NULL,'Món chính',450,NULL,NULL,NULL,NULL,NULL,'published');
 /*!40000 ALTER TABLE `foods` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -461,7 +461,7 @@ CREATE TABLE `ingredients` (
 
 LOCK TABLES `ingredients` WRITE;
 /*!40000 ALTER TABLE `ingredients` DISABLE KEYS */;
-INSERT INTO `ingredients` VALUES (1,'Bß╗Öt m├¼','bot mi'),(2,'Bß╗Öt nß╗ƒ','bot no'),(3,'C├á chua','ca chua'),(4,'H├ánh t├óy','hanh tay'),(5,'Mß╗▒c','muc'),(6,'B├▓','bo'),(7,'thß╗ït g├á','thit ga'),(8,'Gß╗½ng, tß╗Åi, ß╗¢t','gung toi ot'),(9,'Bß╗Öt ngß╗ìt, hß║ít n├¬m, muß╗æi, n╞░ß╗¢c mß║»m, ─æ╞░ß╗¥ng, t╞░╞íng ß╗¢t, n╞░ß╗¢c m├áu, ti├¬u','bot ngot hat nem muoi nuoc mam uong tuong ot nuoc mau tieu'),(10,'X╞░╞íng b├▓','xuong bo'),(11,'Thß╗ït b├▓','thit bo'),(12,'B├ính phß╗ƒ','banh pho'),(13,'Gß╗½ng','gung'),(14,'N╞░ß╗¢c mß║»m','nuoc mam'),(15,'C╞ím nguß╗Öi','com nguoi'),(16,'Trß╗⌐ng','trung'),(17,'H├ánh l├í','hanh la'),(18,'Dß║ºu ─ân','dau an');
+INSERT INTO `ingredients` VALUES (1,'Bột mì','bot mi'),(2,'Bột nở','bot no'),(3,'Cà chua','ca chua'),(4,'Hành tây','hanh tay'),(5,'Mực','muc'),(6,'Bò','bo'),(7,'thịt gà','thit ga'),(8,'Gừng, tỏi, ớt','gung toi ot'),(9,'Bột ngọt, hạt nêm, muối, nước mắm, đường, tương ớt, nước màu, tiêu','bot ngot hat nem muoi nuoc mam uong tuong ot nuoc mau tieu'),(10,'Xương bò','xuong bo'),(11,'Thịt bò','thit bo'),(12,'Bánh phở','banh pho'),(13,'Gừng','gung'),(14,'Nước mắm','nuoc mam'),(15,'Cơm nguội','com nguoi'),(16,'Trứng','trung'),(17,'Hành lá','hanh la'),(18,'Dầu ăn','dau an');
 /*!40000 ALTER TABLE `ingredients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -500,7 +500,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (1,'Ninh ─æ├ú b├¼nh luß║¡n vß╗ü c├┤ng thß╗⌐c cß╗ºa bß║ín: \"B├║n Chß║ú H├á Nß╗Öi\"','2026-02-28 02:45:59.794901',_binary '\0','COMMENT',2,1,2,1),(2,'diepbanbua ─æ├ú theo d├╡i bß║ín','2026-04-10 16:19:39.117111',_binary '\0','FOLLOW',4,NULL,NULL,3),(3,'diepbanbua ─æ├ú b├¼nh luß║¡n vß╗ü c├┤ng thß╗⌐c cß╗ºa bß║ín: \"C╞ím chi├¬n trß╗⌐ng\"','2026-04-10 16:20:48.916763',_binary '\0','COMMENT',4,2,6,3),(4,'diepbanbua ─æ├ú b├¼nh luß║¡n vß╗ü c├┤ng thß╗⌐c cß╗ºa bß║ín: \"C╞ím chi├¬n trß╗⌐ng\"','2026-04-10 16:22:02.840286',_binary '\0','COMMENT',4,3,6,3),(5,'diepbanbua ─æ├ú th├¡ch c├┤ng thß╗⌐c cß╗ºa bß║ín: \"C╞ím chi├¬n trß╗⌐ng\"','2026-04-10 16:23:09.560546',_binary '\0','LIKE',4,NULL,6,3);
+INSERT INTO `notifications` VALUES (1,'Ninh đã bình luận về công thức của bạn: \"Bún Chả Hà Nội\"','2026-02-28 02:45:59.794901',_binary '\0','COMMENT',2,1,2,1),(2,'diepbanbua đã theo dõi bạn','2026-04-10 16:19:39.117111',_binary '\0','FOLLOW',4,NULL,NULL,3),(3,'diepbanbua đã bình luận về công thức của bạn: \"Cơm chiên trứng\"','2026-04-10 16:20:48.916763',_binary '\0','COMMENT',4,2,6,3),(4,'diepbanbua đã bình luận về công thức của bạn: \"Cơm chiên trứng\"','2026-04-10 16:22:02.840286',_binary '\0','COMMENT',4,3,6,3),(5,'diepbanbua đã thích công thức của bạn: \"Cơm chiên trứng\"','2026-04-10 16:23:09.560546',_binary '\0','LIKE',4,NULL,6,3);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -566,7 +566,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES ('UPGRADE_CHEF',1,'2026-02-28 03:31:20.600371','Nang cap','PENDING_ACCOUNT_UPGRADE',150000,NULL,2,NULL),('PURCHASE_PRODUCT',2,'2026-02-28 03:31:55.095688','Thanh to├ín ─æ╞ín h├áng tß╗½ cart','WAITING_PAYMENT',12341,'2026-02-28 03:31:55.129702',2,1),('UPGRADE_CHEF',3,'2026-04-10 15:32:17.955168','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',4,'2026-04-10 15:43:23.508538','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',5,'2026-04-10 15:45:21.073844','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',6,'2026-04-10 15:47:51.546396','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',7,'2026-04-10 15:51:45.786029','Nang cap','COMPLETED',400000,'2026-04-10 15:54:17.315386',3,NULL),('UPGRADE_CHEF',8,'2026-04-10 16:18:55.356010','Nang cap','COMPLETED',150000,'2026-04-10 16:19:33.289574',4,NULL),('PURCHASE_PRODUCT',9,'2026-04-10 16:23:35.587671','Thanh to├ín ─æ╞ín h├áng tß╗½ cart','COMPLETED',270000,'2026-04-10 18:00:25.435189',4,3),('PURCHASE_PRODUCT',10,'2026-04-10 17:57:03.602734','Thanh to├ín ─æ╞ín h├áng tß╗½ cart','COMPLETED',30000,'2026-04-10 18:00:26.388350',4,3);
+INSERT INTO `orders` VALUES ('UPGRADE_CHEF',1,'2026-02-28 03:31:20.600371','Nang cap','PENDING_ACCOUNT_UPGRADE',150000,NULL,2,NULL),('PURCHASE_PRODUCT',2,'2026-02-28 03:31:55.095688','Thanh toán đơn hàng từ cart','WAITING_PAYMENT',12341,'2026-02-28 03:31:55.129702',2,1),('UPGRADE_CHEF',3,'2026-04-10 15:32:17.955168','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',4,'2026-04-10 15:43:23.508538','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',5,'2026-04-10 15:45:21.073844','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',6,'2026-04-10 15:47:51.546396','Nang cap','PENDING_ACCOUNT_UPGRADE',400000,NULL,3,NULL),('UPGRADE_CHEF',7,'2026-04-10 15:51:45.786029','Nang cap','COMPLETED',400000,'2026-04-10 15:54:17.315386',3,NULL),('UPGRADE_CHEF',8,'2026-04-10 16:18:55.356010','Nang cap','COMPLETED',150000,'2026-04-10 16:19:33.289574',4,NULL),('PURCHASE_PRODUCT',9,'2026-04-10 16:23:35.587671','Thanh toán đơn hàng từ cart','COMPLETED',270000,'2026-04-10 18:00:25.435189',4,3),('PURCHASE_PRODUCT',10,'2026-04-10 17:57:03.602734','Thanh toán đơn hàng từ cart','COMPLETED',30000,'2026-04-10 18:00:26.388350',4,3);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -595,7 +595,7 @@ CREATE TABLE `outbox_events` (
 
 LOCK TABLES `outbox_events` WRITE;
 /*!40000 ALTER TABLE `outbox_events` DISABLE KEYS */;
-INSERT INTO `outbox_events` VALUES (1,3,'RECIPE','2026-02-28 03:27:42.704311','RECIPE_CREATED','{\"steps\": \"1: faeg╞░ag╞░ge,2: ├ícvbedbsfdb\", \"title\": \"Pizza\", \"imageUrl\": \"/static_resource/public/upload/recipes/d186ecf4-fda2-4450-85c9-750507bd158b_OIP.webp\", \"description\": \"─Éß╗ô ├¥\", \"ingredients\": \"Bß╗Öt m├¼, Bß╗Öt nß╗ƒ, C├á chua, H├ánh t├óy, Mß╗▒c, B├▓\"}',_binary ''),(2,4,'RECIPE','2026-04-10 15:58:01.799060','RECIPE_CREATED','{\"steps\": \"1: B╞░ß╗¢c 1 S╞í chß║┐ thß╗ït g├á cho sß║ích v├á chß║╖t th├ánh tß╗½ng cß╗Ñc vß╗½a ─ân. Gß╗½ng cß║ío sß║ích vß╗Å v├á th├íi sß╗úi.\\r\\n,2: B╞░ß╗¢c 2╞»ß╗¢p thß╗ït g├á trong mß╗Öt c├íi t├┤ c├╣ng vß╗¢i mß╗Öt ├¡t bß╗Öt ngß╗ìt, hß║ít n├¬m, muß╗æi, n╞░ß╗¢c mß║»m, ─æ╞░ß╗¥ng, t╞░╞íng ß╗¢t, n╞░ß╗¢c m├áu trong 10 -15 ph├║t.\\r\\n,3: B╞░ß╗¢c 3 Bß║»t nß╗ôi l├¬n bß║┐p, phi v├áng tß╗Åi rß╗ôi cho thß╗ït g├á ─æ├ú ╞░ß╗¢p v├áo nß║Ñu trong 2 ph├║t cho th├¬m n╞░ß╗¢c lß╗ìc v├áo vß╗½a ngß║¡p thß╗ït g├á. Tiß║┐p tß╗Ñc nß║Ñu trong khoß║úng 20 ph├║t ß╗ƒ lß╗¡a vß╗½a, n├¬m nß║┐m lß║íi cho vß╗½a ─ân rß╗ôi cho gß╗½ng v├á ti├¬u v├áo ho├án th├ánh m├│n ─ân.\\r\\n\", \"title\": \"G├á kho gß╗½ng\", \"imageUrl\": \"/static_resource/public/upload/recipes/8be9c9fc-d46d-43a0-aca9-f54744cab930_tong-hop-cong-thuc-nau-an-theo-cach-che-bien-de-lam-tai-nha-202112241205239944.jpg\", \"description\": \"G├á l├á mß╗Öt nguy├¬n liß╗çu chß║┐ biß║┐n thß╗⌐c ─ân ─æ╞░ß╗úc nhiß╗üu ng╞░ß╗¥i ╞░a th├¡ch. Mß╗Öt trong 10 m├│n g├á kho ngon, b├á nß╗Öi trß╗ú kh├┤ng thß╗â bß╗Å qua th├¼ m├│n g├á kho gß╗½ng lu├┤n ─æ╞░ß╗úc ╞░u ti├¬n sß╗æ 1 v├á th╞░ß╗¥ng thß║Ñy nhß║Ñt trong c├íc bß╗»a c╞ím gia ─æ├¼nh.\", \"ingredients\": \"thß╗ït g├á, Gß╗½ng, tß╗Åi, ß╗¢t, Bß╗Öt ngß╗ìt, hß║ít n├¬m, muß╗æi, n╞░ß╗¢c mß║»m, ─æ╞░ß╗¥ng, t╞░╞íng ß╗¢t, n╞░ß╗¢c m├áu, ti├¬u\"}',_binary ''),(3,5,'RECIPE','2026-04-10 16:04:18.982540','RECIPE_CREATED','{\"steps\": \"1: Chß║ºn x╞░╞íng b├▓ qua n╞░ß╗¢c s├┤i 5 ph├║t ─æß╗â loß║íi bß╗Å tß║íp chß║Ñt,2: Hß║ºm x╞░╞íng b├▓ vß╗¢i 3 l├¡t n╞░ß╗¢c trong 3ΓÇô6 giß╗¥\\r\\n,3: N╞░ß╗¢ng gß╗½ng v├á h├ánh t├óy, sau ─æ├│ cho v├áo nß╗ôi n╞░ß╗¢c d├╣ng\\r\\n\", \"title\": \"Phß╗ƒ b├▓\", \"imageUrl\": \"/static_resource/public/upload/recipes/518c54b2-b384-47b4-8831-cbe06ec52a2d_Pho-bo-Ha-Noi-7-vnexpress-1763-7388-9585-1763372391.jpg\", \"description\": \"≡ƒæë Phß╗ƒ b├▓ truyß╗ün thß╗æng Viß╗çt Nam vß╗¢i n╞░ß╗¢c d├╣ng hß║ºm tß╗½ x╞░╞íng b├▓ ─æß║¡m ─æ├á, th╞ím m├╣i quß║┐ hß╗ôi, ─ân k├¿m b├ính phß╗ƒ mß╗üm v├á thß╗ït b├▓ t╞░╞íi.\", \"ingredients\": \"X╞░╞íng b├▓, Thß╗ït b├▓, B├ính phß╗ƒ, Gß╗½ng, N╞░ß╗¢c mß║»m, H├ánh t├óy\"}',_binary ''),(4,6,'RECIPE','2026-04-10 16:10:36.487077','RECIPE_CREATED','{\"steps\": \"1: B╞░ß╗¢c 1: Phi h├ánh vß╗¢i dß║ºu\\r\\n,2: B╞░ß╗¢c 2: ─Éß║¡p trß╗⌐ng, ─æß║úo ─æß╗üu\\r\\n,3: B╞░ß╗¢c 3: Cho c╞ím v├áo ─æß║úo\\r\\n,4: B╞░ß╗¢c 4: N├¬m gia vß╗ï, th├¬m h├ánh\\r\\n,5: ,6: \", \"title\": \"C╞ím chi├¬n trß╗⌐ng\", \"imageUrl\": \"/static_resource/public/upload/recipes/9efac268-132f-4c26-9a1d-b1f0ea9f5d78_cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg\", \"description\": \"M├│n c╞ím chi├¬n nhanh gß╗ìn, ph├╣ hß╗úp ─ân s├íng hoß║╖c tß║¡n dß╗Ñng c╞ím nguß╗Öi.\", \"ingredients\": \"C╞ím nguß╗Öi, Trß╗⌐ng, H├ánh l├í, N╞░ß╗¢c mß║»m, Dß║ºu ─ân\"}',_binary '');
+INSERT INTO `outbox_events` VALUES (1,3,'RECIPE','2026-02-28 03:27:42.704311','RECIPE_CREATED','{\"steps\": \"1: faegưagưge,2: ácvbedbsfdb\", \"title\": \"Pizza\", \"imageUrl\": \"/static_resource/public/upload/recipes/d186ecf4-fda2-4450-85c9-750507bd158b_OIP.webp\", \"description\": \"Đồ Ý\", \"ingredients\": \"Bột mì, Bột nở, Cà chua, Hành tây, Mực, Bò\"}',_binary ''),(2,4,'RECIPE','2026-04-10 15:58:01.799060','RECIPE_CREATED','{\"steps\": \"1: Bước 1 Sơ chế thịt gà cho sạch và chặt thành từng cục vừa ăn. Gừng cạo sạch vỏ và thái sợi.\\r\\n,2: Bước 2Ướp thịt gà trong một cái tô cùng với một ít bột ngọt, hạt nêm, muối, nước mắm, đường, tương ớt, nước màu trong 10 -15 phút.\\r\\n,3: Bước 3 Bắt nồi lên bếp, phi vàng tỏi rồi cho thịt gà đã ướp vào nấu trong 2 phút cho thêm nước lọc vào vừa ngập thịt gà. Tiếp tục nấu trong khoảng 20 phút ở lửa vừa, nêm nếm lại cho vừa ăn rồi cho gừng và tiêu vào hoàn thành món ăn.\\r\\n\", \"title\": \"Gà kho gừng\", \"imageUrl\": \"/static_resource/public/upload/recipes/8be9c9fc-d46d-43a0-aca9-f54744cab930_tong-hop-cong-thuc-nau-an-theo-cach-che-bien-de-lam-tai-nha-202112241205239944.jpg\", \"description\": \"Gà là một nguyên liệu chế biến thức ăn được nhiều người ưa thích. Một trong 10 món gà kho ngon, bà nội trợ không thể bỏ qua thì món gà kho gừng luôn được ưu tiên số 1 và thường thấy nhất trong các bữa cơm gia đình.\", \"ingredients\": \"thịt gà, Gừng, tỏi, ớt, Bột ngọt, hạt nêm, muối, nước mắm, đường, tương ớt, nước màu, tiêu\"}',_binary ''),(3,5,'RECIPE','2026-04-10 16:04:18.982540','RECIPE_CREATED','{\"steps\": \"1: Chần xương bò qua nước sôi 5 phút để loại bỏ tạp chất,2: Hầm xương bò với 3 lít nước trong 3–6 giờ\\r\\n,3: Nướng gừng và hành tây, sau đó cho vào nồi nước dùng\\r\\n\", \"title\": \"Phở bò\", \"imageUrl\": \"/static_resource/public/upload/recipes/518c54b2-b384-47b4-8831-cbe06ec52a2d_Pho-bo-Ha-Noi-7-vnexpress-1763-7388-9585-1763372391.jpg\", \"description\": \"👉 Phở bò truyền thống Việt Nam với nước dùng hầm từ xương bò đậm đà, thơm mùi quế hồi, ăn kèm bánh phở mềm và thịt bò tươi.\", \"ingredients\": \"Xương bò, Thịt bò, Bánh phở, Gừng, Nước mắm, Hành tây\"}',_binary ''),(4,6,'RECIPE','2026-04-10 16:10:36.487077','RECIPE_CREATED','{\"steps\": \"1: Bước 1: Phi hành với dầu\\r\\n,2: Bước 2: Đập trứng, đảo đều\\r\\n,3: Bước 3: Cho cơm vào đảo\\r\\n,4: Bước 4: Nêm gia vị, thêm hành\\r\\n,5: ,6: \", \"title\": \"Cơm chiên trứng\", \"imageUrl\": \"/static_resource/public/upload/recipes/9efac268-132f-4c26-9a1d-b1f0ea9f5d78_cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg\", \"description\": \"Món cơm chiên nhanh gọn, phù hợp ăn sáng hoặc tận dụng cơm nguội.\", \"ingredients\": \"Cơm nguội, Trứng, Hành lá, Nước mắm, Dầu ăn\"}',_binary '');
 /*!40000 ALTER TABLE `outbox_events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -622,7 +622,7 @@ CREATE TABLE `packages_upgrades` (
 
 LOCK TABLES `packages_upgrades` WRITE;
 /*!40000 ALTER TABLE `packages_upgrades` DISABLE KEYS */;
-INSERT INTO `packages_upgrades` VALUES (1,'Full access 1 th├íng cho CHEF',30,'CHEF 1 Month',150000),(2,'Full access 3 th├íng cho CHEF',90,'CHEF 3 Months',400000);
+INSERT INTO `packages_upgrades` VALUES (1,'Full access 1 tháng cho CHEF',30,'CHEF 1 Month',150000),(2,'Full access 3 tháng cho CHEF',90,'CHEF 3 Months',400000);
 /*!40000 ALTER TABLE `packages_upgrades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -777,7 +777,7 @@ CREATE TABLE `recipe_ingredients` (
 
 LOCK TABLES `recipe_ingredients` WRITE;
 /*!40000 ALTER TABLE `recipe_ingredients` DISABLE KEYS */;
-INSERT INTO `recipe_ingredients` VALUES (1,1,'',500,'Bß╗Öt m├¼','g',1,3),(2,2,'',200,'Bß╗Öt nß╗ƒ','g',2,3),(3,3,'',4,'C├á chua','quß║ú',3,3),(4,4,'',4,'H├ánh t├óy','cß╗º',4,3),(5,5,'',500,'Mß╗▒c','g',5,3),(6,6,'',600,'B├▓','g',6,3),(7,1,NULL,24,'C├á chua','quß║ú',3,2),(8,1,'',500,'thß╗ït g├á','g',7,4),(9,2,'',NULL,'Gß╗½ng, tß╗Åi, ß╗¢t','',8,4),(10,3,'',NULL,'Bß╗Öt ngß╗ìt, hß║ít n├¬m, muß╗æi, n╞░ß╗¢c mß║»m, ─æ╞░ß╗¥ng, t╞░╞íng ß╗¢t, n╞░ß╗¢c m├áu, ti├¬u','',9,4),(11,1,'hß║ºm n╞░ß╗¢c d├╣ng',1500,'X╞░╞íng b├▓','g',10,5),(12,2,'th├íi mß╗Ång',500,'Thß╗ït b├▓','g',11,5),(13,3,'',1000,'B├ính phß╗ƒ','g',12,5),(14,4,'n╞░ß╗¢ng',NULL,'Gß╗½ng','g',13,5),(15,5,'',30,'N╞░ß╗¢c mß║»m','ml',14,5),(16,6,'',100,'H├ánh t├óy','g',4,5),(17,1,'',500,'C╞ím nguß╗Öi','g',15,6),(18,2,'',3,'Trß╗⌐ng','quß║ú',16,6),(19,3,'',50,'H├ánh l├í','g',17,6),(20,4,'',15,'N╞░ß╗¢c mß║»m','ml',14,6),(21,5,'',20,'Dß║ºu ─ân','ml',18,6);
+INSERT INTO `recipe_ingredients` VALUES (1,1,'',500,'Bột mì','g',1,3),(2,2,'',200,'Bột nở','g',2,3),(3,3,'',4,'Cà chua','quả',3,3),(4,4,'',4,'Hành tây','củ',4,3),(5,5,'',500,'Mực','g',5,3),(6,6,'',600,'Bò','g',6,3),(7,1,NULL,24,'Cà chua','quả',3,2),(8,1,'',500,'thịt gà','g',7,4),(9,2,'',NULL,'Gừng, tỏi, ớt','',8,4),(10,3,'',NULL,'Bột ngọt, hạt nêm, muối, nước mắm, đường, tương ớt, nước màu, tiêu','',9,4),(11,1,'hầm nước dùng',1500,'Xương bò','g',10,5),(12,2,'thái mỏng',500,'Thịt bò','g',11,5),(13,3,'',1000,'Bánh phở','g',12,5),(14,4,'nướng',NULL,'Gừng','g',13,5),(15,5,'',30,'Nước mắm','ml',14,5),(16,6,'',100,'Hành tây','g',4,5),(17,1,'',500,'Cơm nguội','g',15,6),(18,2,'',3,'Trứng','quả',16,6),(19,3,'',50,'Hành lá','g',17,6),(20,4,'',15,'Nước mắm','ml',14,6),(21,5,'',20,'Dầu ăn','ml',18,6);
 /*!40000 ALTER TABLE `recipe_ingredients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -832,7 +832,7 @@ CREATE TABLE `recipe_search_index` (
 
 LOCK TABLES `recipe_search_index` WRITE;
 /*!40000 ALTER TABLE `recipe_search_index` DISABLE KEYS */;
-INSERT INTO `recipe_search_index` VALUES (3,'Pizza ─Éß╗ô ├¥ M├│n Ch├¡nh Bß╗Öt m├¼  Bß╗Öt nß╗ƒ  C├á chua  H├ánh t├óy  Mß╗▒c  B├▓'),(4,'G├á kho gß╗½ng G├á l├á mß╗Öt nguy├¬n liß╗çu chß║┐ biß║┐n thß╗⌐c ─ân ─æ╞░ß╗úc nhiß╗üu ng╞░ß╗¥i ╞░a th├¡ch. Mß╗Öt trong 10 m├│n g├á kho ngon, b├á nß╗Öi trß╗ú kh├┤ng thß╗â bß╗Å qua th├¼ m├│n g├á kho gß╗½ng lu├┤n ─æ╞░ß╗úc ╞░u ti├¬n sß╗æ 1 v├á th╞░ß╗¥ng thß║Ñy nhß║Ñt trong c├íc bß╗»a c╞ím gia ─æ├¼nh. M├│n Ch├¡nh thß╗ït g├á  Gß╗½ng, tß╗Åi, ß╗¢t  Bß╗Öt ngß╗ìt, hß║ít n├¬m, muß╗æi, n╞░ß╗¢c mß║»m, ─æ╞░ß╗¥ng, t╞░╞íng ß╗¢t, n╞░ß╗¢c m├áu, ti├¬u'),(5,'Phß╗ƒ b├▓ ≡ƒæë Phß╗ƒ b├▓ truyß╗ün thß╗æng Viß╗çt Nam vß╗¢i n╞░ß╗¢c d├╣ng hß║ºm tß╗½ x╞░╞íng b├▓ ─æß║¡m ─æ├á, th╞ím m├╣i quß║┐ hß╗ôi, ─ân k├¿m b├ính phß╗ƒ mß╗üm v├á thß╗ït b├▓ t╞░╞íi. M├│n Khai Vß╗ï X╞░╞íng b├▓ hß║ºm n╞░ß╗¢c d├╣ng Thß╗ït b├▓ th├íi mß╗Ång B├ính phß╗ƒ  Gß╗½ng n╞░ß╗¢ng N╞░ß╗¢c mß║»m  H├ánh t├óy'),(6,'C╞ím chi├¬n trß╗⌐ng M├│n c╞ím chi├¬n nhanh gß╗ìn, ph├╣ hß╗úp ─ân s├íng hoß║╖c tß║¡n dß╗Ñng c╞ím nguß╗Öi. M├│n Ch├¡nh C╞ím nguß╗Öi  Trß╗⌐ng  H├ánh l├í  N╞░ß╗¢c mß║»m  Dß║ºu ─ân');
+INSERT INTO `recipe_search_index` VALUES (3,'Pizza Đồ Ý Món Chính Bột mì  Bột nở  Cà chua  Hành tây  Mực  Bò'),(4,'Gà kho gừng Gà là một nguyên liệu chế biến thức ăn được nhiều người ưa thích. Một trong 10 món gà kho ngon, bà nội trợ không thể bỏ qua thì món gà kho gừng luôn được ưu tiên số 1 và thường thấy nhất trong các bữa cơm gia đình. Món Chính thịt gà  Gừng, tỏi, ớt  Bột ngọt, hạt nêm, muối, nước mắm, đường, tương ớt, nước màu, tiêu'),(5,'Phở bò 👉 Phở bò truyền thống Việt Nam với nước dùng hầm từ xương bò đậm đà, thơm mùi quế hồi, ăn kèm bánh phở mềm và thịt bò tươi. Món Khai Vị Xương bò hầm nước dùng Thịt bò thái mỏng Bánh phở  Gừng nướng Nước mắm  Hành tây'),(6,'Cơm chiên trứng Món cơm chiên nhanh gọn, phù hợp ăn sáng hoặc tận dụng cơm nguội. Món Chính Cơm nguội  Trứng  Hành lá  Nước mắm  Dầu ăn');
 /*!40000 ALTER TABLE `recipe_search_index` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -927,7 +927,7 @@ CREATE TABLE `recipes` (
 
 LOCK TABLES `recipes` WRITE;
 /*!40000 ALTER TABLE `recipes` DISABLE KEYS */;
-INSERT INTO `recipes` VALUES (1,180,'2026-02-28 00:48:02.000000','Phß╗ƒ b├▓ Nam ─Éß╗ïnh gia truyß╗ün th╞ím nß╗⌐c m┼⌐i','MEDIUM','https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400',30,'PUBLIC',4,'APPROVED','Phß╗ƒ B├▓ Nam ─Éß╗ïnh','2026-02-28 00:48:02.000000','https://youtube.com/demo1',11,1),(2,20,'2026-02-28 00:48:02.000000','B├║n chß║ú H├á Nß╗Öi thß╗ït n╞░ß╗¢ng th╞ím lß╗½ng','EASY','https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400',45,'PUBLIC',2,'APPROVED','B├║n Chß║ú H├á Nß╗Öi','2026-02-28 00:48:02.000000','https://youtube.com/demo2',15,1),(3,30,'2026-02-28 03:27:42.558021','─Éß╗ô ├¥','EASY','/static_resource/public/upload/recipes/d186ecf4-fda2-4450-85c9-750507bd158b_OIP.webp',50,'PUBLIC',2,'APPROVED','Pizza','2026-02-28 03:27:42.558021',NULL,6,1),(4,30,'2026-04-10 15:58:01.772121','G├á l├á mß╗Öt nguy├¬n liß╗çu chß║┐ biß║┐n thß╗⌐c ─ân ─æ╞░ß╗úc nhiß╗üu ng╞░ß╗¥i ╞░a th├¡ch. Mß╗Öt trong 10 m├│n g├á kho ngon, b├á nß╗Öi trß╗ú kh├┤ng thß╗â bß╗Å qua th├¼ m├│n g├á kho gß╗½ng lu├┤n ─æ╞░ß╗úc ╞░u ti├¬n sß╗æ 1 v├á th╞░ß╗¥ng thß║Ñy nhß║Ñt trong c├íc bß╗»a c╞ím gia ─æ├¼nh.','EASY','/static_resource/public/upload/recipes/8be9c9fc-d46d-43a0-aca9-f54744cab930_tong-hop-cong-thuc-nau-an-theo-cach-che-bien-de-lam-tai-nha-202112241205239944.jpg',10,'PUBLIC',2,'APPROVED','G├á kho gß╗½ng','2026-04-10 15:58:01.772121',NULL,2,3),(5,180,'2026-04-10 16:04:18.964908','≡ƒæë Phß╗ƒ b├▓ truyß╗ün thß╗æng Viß╗çt Nam vß╗¢i n╞░ß╗¢c d├╣ng hß║ºm tß╗½ x╞░╞íng b├▓ ─æß║¡m ─æ├á, th╞ím m├╣i quß║┐ hß╗ôi, ─ân k├¿m b├ính phß╗ƒ mß╗üm v├á thß╗ït b├▓ t╞░╞íi.','EASY','/static_resource/public/upload/recipes/518c54b2-b384-47b4-8831-cbe06ec52a2d_Pho-bo-Ha-Noi-7-vnexpress-1763-7388-9585-1763372391.jpg',20,'PUBLIC',2,'APPROVED','Phß╗ƒ b├▓','2026-04-10 16:04:18.964908',NULL,4,3),(6,10,'2026-04-10 16:10:36.456502','M├│n c╞ím chi├¬n nhanh gß╗ìn, ph├╣ hß╗úp ─ân s├íng hoß║╖c tß║¡n dß╗Ñng c╞ím nguß╗Öi.','EASY','/static_resource/public/upload/recipes/9efac268-132f-4c26-9a1d-b1f0ea9f5d78_cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg',10,'PUBLIC',2,'APPROVED','C╞ím chi├¬n trß╗⌐ng','2026-04-10 16:10:36.456502','/static_resource/public/upload/recipe_videos/0858a741-053b-4a4e-abd2-de4189801c3b_Tp_12__Hng_Dn_Cm_Chin_Trng_Kiu_Ny_n_Ch_C_Ghin_-_Chef_Hoshi_Phan_-_480p.mp4',13,3);
+INSERT INTO `recipes` VALUES (1,180,'2026-02-28 00:48:02.000000','Phở bò Nam Định gia truyền thơm nức mũi','MEDIUM','https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400',30,'PUBLIC',4,'APPROVED','Phở Bò Nam Định','2026-02-28 00:48:02.000000','https://youtube.com/demo1',11,1),(2,20,'2026-02-28 00:48:02.000000','Bún chả Hà Nội thịt nướng thơm lừng','EASY','https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400',45,'PUBLIC',2,'APPROVED','Bún Chả Hà Nội','2026-02-28 00:48:02.000000','https://youtube.com/demo2',15,1),(3,30,'2026-02-28 03:27:42.558021','Đồ Ý','EASY','/static_resource/public/upload/recipes/d186ecf4-fda2-4450-85c9-750507bd158b_OIP.webp',50,'PUBLIC',2,'APPROVED','Pizza','2026-02-28 03:27:42.558021',NULL,6,1),(4,30,'2026-04-10 15:58:01.772121','Gà là một nguyên liệu chế biến thức ăn được nhiều người ưa thích. Một trong 10 món gà kho ngon, bà nội trợ không thể bỏ qua thì món gà kho gừng luôn được ưu tiên số 1 và thường thấy nhất trong các bữa cơm gia đình.','EASY','/static_resource/public/upload/recipes/8be9c9fc-d46d-43a0-aca9-f54744cab930_tong-hop-cong-thuc-nau-an-theo-cach-che-bien-de-lam-tai-nha-202112241205239944.jpg',10,'PUBLIC',2,'APPROVED','Gà kho gừng','2026-04-10 15:58:01.772121',NULL,2,3),(5,180,'2026-04-10 16:04:18.964908','👉 Phở bò truyền thống Việt Nam với nước dùng hầm từ xương bò đậm đà, thơm mùi quế hồi, ăn kèm bánh phở mềm và thịt bò tươi.','EASY','/static_resource/public/upload/recipes/518c54b2-b384-47b4-8831-cbe06ec52a2d_Pho-bo-Ha-Noi-7-vnexpress-1763-7388-9585-1763372391.jpg',20,'PUBLIC',2,'APPROVED','Phở bò','2026-04-10 16:04:18.964908',NULL,4,3),(6,10,'2026-04-10 16:10:36.456502','Món cơm chiên nhanh gọn, phù hợp ăn sáng hoặc tận dụng cơm nguội.','EASY','/static_resource/public/upload/recipes/9efac268-132f-4c26-9a1d-b1f0ea9f5d78_cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg',10,'PUBLIC',2,'APPROVED','Cơm chiên trứng','2026-04-10 16:10:36.456502','/static_resource/public/upload/recipe_videos/0858a741-053b-4a4e-abd2-de4189801c3b_Tp_12__Hng_Dn_Cm_Chin_Trng_Kiu_Ny_n_Ch_C_Ghin_-_Chef_Hoshi_Phan_-_480p.mp4',13,3);
 /*!40000 ALTER TABLE `recipes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1062,7 +1062,7 @@ CREATE TABLE `steps` (
 
 LOCK TABLES `steps` WRITE;
 /*!40000 ALTER TABLE `steps` DISABLE KEYS */;
-INSERT INTO `steps` VALUES (1,'faeg╞░ag╞░ge',1,20,3),(2,'├ícvbedbsfdb',2,34,3),(3,'B╞░ß╗¢c 1 S╞í chß║┐ thß╗ït g├á cho sß║ích v├á chß║╖t th├ánh tß╗½ng cß╗Ñc vß╗½a ─ân. Gß╗½ng cß║ío sß║ích vß╗Å v├á th├íi sß╗úi.\r\n',1,0,4),(4,'B╞░ß╗¢c 2╞»ß╗¢p thß╗ït g├á trong mß╗Öt c├íi t├┤ c├╣ng vß╗¢i mß╗Öt ├¡t bß╗Öt ngß╗ìt, hß║ít n├¬m, muß╗æi, n╞░ß╗¢c mß║»m, ─æ╞░ß╗¥ng, t╞░╞íng ß╗¢t, n╞░ß╗¢c m├áu trong 10 -15 ph├║t.\r\n',2,0,4),(5,'B╞░ß╗¢c 3 Bß║»t nß╗ôi l├¬n bß║┐p, phi v├áng tß╗Åi rß╗ôi cho thß╗ït g├á ─æ├ú ╞░ß╗¢p v├áo nß║Ñu trong 2 ph├║t cho th├¬m n╞░ß╗¢c lß╗ìc v├áo vß╗½a ngß║¡p thß╗ït g├á. Tiß║┐p tß╗Ñc nß║Ñu trong khoß║úng 20 ph├║t ß╗ƒ lß╗¡a vß╗½a, n├¬m nß║┐m lß║íi cho vß╗½a ─ân rß╗ôi cho gß╗½ng v├á ti├¬u v├áo ho├án th├ánh m├│n ─ân.\r\n',3,0,4),(6,'Chß║ºn x╞░╞íng b├▓ qua n╞░ß╗¢c s├┤i 5 ph├║t ─æß╗â loß║íi bß╗Å tß║íp chß║Ñt',1,5,5),(7,'Hß║ºm x╞░╞íng b├▓ vß╗¢i 3 l├¡t n╞░ß╗¢c trong 3ΓÇô6 giß╗¥\r\n',2,180,5),(8,'N╞░ß╗¢ng gß╗½ng v├á h├ánh t├óy, sau ─æ├│ cho v├áo nß╗ôi n╞░ß╗¢c d├╣ng\r\n',3,10,5),(9,'B╞░ß╗¢c 1: Phi h├ánh vß╗¢i dß║ºu\r\n',1,2,6),(10,'B╞░ß╗¢c 2: ─Éß║¡p trß╗⌐ng, ─æß║úo ─æß╗üu\r\n',2,2,6),(11,'B╞░ß╗¢c 3: Cho c╞ím v├áo ─æß║úo\r\n',3,5,6),(12,'B╞░ß╗¢c 4: N├¬m gia vß╗ï, th├¬m h├ánh\r\n',4,1,6),(13,'',5,0,6),(14,'',6,0,6);
+INSERT INTO `steps` VALUES (1,'faegưagưge',1,20,3),(2,'ácvbedbsfdb',2,34,3),(3,'Bước 1 Sơ chế thịt gà cho sạch và chặt thành từng cục vừa ăn. Gừng cạo sạch vỏ và thái sợi.\r\n',1,0,4),(4,'Bước 2Ướp thịt gà trong một cái tô cùng với một ít bột ngọt, hạt nêm, muối, nước mắm, đường, tương ớt, nước màu trong 10 -15 phút.\r\n',2,0,4),(5,'Bước 3 Bắt nồi lên bếp, phi vàng tỏi rồi cho thịt gà đã ướp vào nấu trong 2 phút cho thêm nước lọc vào vừa ngập thịt gà. Tiếp tục nấu trong khoảng 20 phút ở lửa vừa, nêm nếm lại cho vừa ăn rồi cho gừng và tiêu vào hoàn thành món ăn.\r\n',3,0,4),(6,'Chần xương bò qua nước sôi 5 phút để loại bỏ tạp chất',1,5,5),(7,'Hầm xương bò với 3 lít nước trong 3–6 giờ\r\n',2,180,5),(8,'Nướng gừng và hành tây, sau đó cho vào nồi nước dùng\r\n',3,10,5),(9,'Bước 1: Phi hành với dầu\r\n',1,2,6),(10,'Bước 2: Đập trứng, đảo đều\r\n',2,2,6),(11,'Bước 3: Cho cơm vào đảo\r\n',3,5,6),(12,'Bước 4: Nêm gia vị, thêm hành\r\n',4,1,6),(13,'',5,0,6),(14,'',6,0,6);
 /*!40000 ALTER TABLE `steps` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1208,7 +1208,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,NULL,NULL,'2026-02-27 23:20:02.317124','1990-01-01','admin','2026-04-10 16:28:28.685135','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','admin'),(2,'/static_resource/public/upload/avatars/avatar_holder.png','├¼aß╗útnagi','2026-02-28 00:28:08.975589','1985-02-12','ninh@test.com','2026-02-28 03:31:05.761993','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','Ninh'),(3,'/static_resource/public/upload/avatars/67324df7-00ec-4355-ab9f-074c0374f2fe_wall_1920x1080_019.png','user01','2026-04-10 15:30:24.371517','2222-12-11','user01@gmail.com','2026-04-10 17:55:05.766718','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','user01'),(4,'/static_resource/public/upload/avatars/82a4ac78-4c37-4394-aa30-9d1d04da1fc3_wall_unknown_110.jpg','I am Diep','2026-04-10 16:18:00.253158','2222-12-11','diepbanbua@gmail.com','2026-04-10 17:56:37.023043','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','diepbanbua');
+INSERT INTO `users` VALUES (1,NULL,NULL,'2026-02-27 23:20:02.317124','1990-01-01','admin','2026-04-10 16:28:28.685135','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','admin'),(2,'/static_resource/public/upload/avatars/avatar_holder.png','ìaợtnagi','2026-02-28 00:28:08.975589','1985-02-12','ninh@test.com','2026-02-28 03:31:05.761993','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','Ninh'),(3,'/static_resource/public/upload/avatars/67324df7-00ec-4355-ab9f-074c0374f2fe_wall_1920x1080_019.png','user01','2026-04-10 15:30:24.371517','2222-12-11','user01@gmail.com','2026-04-10 17:55:05.766718','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','user01'),(4,'/static_resource/public/upload/avatars/82a4ac78-4c37-4394-aa30-9d1d04da1fc3_wall_unknown_110.jpg','I am Diep','2026-04-10 16:18:00.253158','2222-12-11','diepbanbua@gmail.com','2026-04-10 17:56:37.023043','$2a$10$54izXhXVRXubeNjUTQvT/uJG0jF.HRxuX20blhorpT/ow7V7ArtlC','ACTIVE','diepbanbua');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1242,7 +1242,7 @@ CREATE TABLE `wallet_transaction` (
 
 LOCK TABLES `wallet_transaction` WRITE;
 /*!40000 ALTER TABLE `wallet_transaction` DISABLE KEYS */;
-INSERT INTO `wallet_transaction` VALUES (1,243000,27000,'2026-04-10 16:24:20.556278','Nhß║¡n tiß╗ün ─æ╞ín h├áng #9 (Ph├¡ s├án 10%)',270000,9,'COMPLETE','ORDER_REVENUE',1),(2,27000,3000,'2026-04-10 17:57:28.082952','Nhß║¡n tiß╗ün ─æ╞ín h├áng #10 (Ph├¡ s├án 10%)',30000,10,'COMPLETE','ORDER_REVENUE',1),(3,243000,NULL,'2026-04-10 18:00:25.433565','Giß║úi ng├ón tiß╗ün ─æ╞ín h├áng sau khi ─æ├ú trß╗½ ph├¡ #9 v├áo v├¡ ch├¡nh',NULL,9,'COMPLETE','RELEASE_PENDING',1),(4,27000,NULL,'2026-04-10 18:00:26.385991','Giß║úi ng├ón tiß╗ün ─æ╞ín h├áng sau khi ─æ├ú trß╗½ ph├¡ #10 v├áo v├¡ ch├¡nh',NULL,10,'COMPLETE','RELEASE_PENDING',1),(5,-270,NULL,'2026-04-10 18:00:41.565314','R├║t tiß╗ün tß╗½ v├¡',NULL,NULL,'COMPLETE','WITHDRAW',1);
+INSERT INTO `wallet_transaction` VALUES (1,243000,27000,'2026-04-10 16:24:20.556278','Nhận tiền đơn hàng #9 (Phí sàn 10%)',270000,9,'COMPLETE','ORDER_REVENUE',1),(2,27000,3000,'2026-04-10 17:57:28.082952','Nhận tiền đơn hàng #10 (Phí sàn 10%)',30000,10,'COMPLETE','ORDER_REVENUE',1),(3,243000,NULL,'2026-04-10 18:00:25.433565','Giải ngân tiền đơn hàng sau khi đã trừ phí #9 vào ví chính',NULL,9,'COMPLETE','RELEASE_PENDING',1),(4,27000,NULL,'2026-04-10 18:00:26.385991','Giải ngân tiền đơn hàng sau khi đã trừ phí #10 vào ví chính',NULL,10,'COMPLETE','RELEASE_PENDING',1),(5,-270,NULL,'2026-04-10 18:00:41.565314','Rút tiền từ ví',NULL,NULL,'COMPLETE','WITHDRAW',1);
 /*!40000 ALTER TABLE `wallet_transaction` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
