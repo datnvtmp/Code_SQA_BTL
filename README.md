@@ -98,7 +98,16 @@ spring:
     password: 123456    # ← Thay bằng password MySQL của bạn
 ```
 
-### Bước 4: Chạy Backend (Spring Boot)
+### Bước 4: Cấu hình khóa (API Key) cho AI
+Vì lý do bảo mật, mã khóa API không được tải lên Github. Khi clone dự án về, bạn cần:
+1. Tạo một file tên là `.env` nằm ở thư mục `Backend/BE_Cooking-main/cooking/`
+2. Mở file `.env` đó ra và dán nội dung sau vào:
+```env
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxx
+```
+*(Thay `gsk_xxxx` bằng key thật do chủ dự án cung cấp hoặc tự đăng ký tại groq.com).*
+
+### Bước 5: Chạy Backend (Spring Boot)
 
 ```bash
 # Di chuyển đến thư mục Backend
@@ -116,7 +125,7 @@ Tomcat started on port 8080
 
 ✅ Backend sẽ chạy tại: **http://localhost:8080**
 
-### Bước 5: Cấu hình Frontend
+### Bước 6: Cấu hình Frontend
 
 File `.env.local` tại `DATN/TotNghiep-main/.env.local` đã được cấu hình sẵn:
 
@@ -125,7 +134,7 @@ NEXT_PUBLIC_API_HOST=http://localhost:8080
 NEXT_PUBLIC_API_DATA=http://localhost:3001
 ```
 
-### Bước 6: Chạy Frontend (Next.js)
+### Bước 7: Chạy Frontend (Next.js)
 
 ```bash
 # Di chuyển đến thư mục Frontend
