@@ -70,19 +70,26 @@ CookpadOri/
 
 ### Bước 2: Tạo Database & Import dữ liệu
 
-Mở **Command Prompt** hoặc **PowerShell**, chạy lần lượt:
+Mở **Command Prompt** hoặc **PowerShell**, chạy lần lượt các lệnh sau:
 
+1. **Tạo database trống:**
 ```bash
-# Tạo database
 "C:\Program Files\MySQL\MySQL Server 9.3\bin\mysql.exe" -u root -p123456 -e "CREATE DATABASE IF NOT EXISTS cooking_db CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
-
-# Import dữ liệu từ file backup
-# Cách 1: Dùng CMD
-cmd /c ""C:\Program Files\MySQL\MySQL Server 9.3\bin\mysql.exe" -u root -p123456 cooking_db < cooking_db_backup.sql"
-
-# Cách 2: Dùng PowerShell
-Get-Content cooking_db_backup.sql | & "C:\Program Files\MySQL\MySQL Server 9.3\bin\mysql.exe" -u root -p123456 cooking_db
 ```
+
+2. **Import dữ liệu (Cách an toàn nhất - Tránh lỗi tiếng Việt):**
+Để tránh lỗi vỡ font tiếng Việt trên Windows, bạn **không nên** dùng dấu `<`. Hãy dùng lệnh `source` trực tiếp như sau:
+```bash
+# Truy cập vào MySQL client
+"C:\Program Files\MySQL\MySQL Server 9.3\bin\mysql.exe" -u root -p123456 --default-character-set=utf8mb4 cooking_db
+
+# Khi đã ở trong MySQL (có chữ mysql>), gõ lệnh sau rồi Enter:
+mysql> set names utf8mb4;
+mysql> source cooking_db_backup.sql;
+mysql> exit;
+```
+
+> **💡 Mẹo:** Nếu bạn dùng phần mềm UI như **MySQL Workbench** hoặc **HeidiSQL**, chỉ cần mở file `.sql` này và ấn **Run/Execute** là xong, dữ liệu sẽ tự động chuẩn 100%.
 
 > **⚠️ Lưu ý:** Đường dẫn MySQL có thể khác tùy phiên bản cài đặt. Hãy thay đổi cho phù hợp.
 
